@@ -176,13 +176,13 @@
           <p>Tell us what you’re working through. We’ll start with the details that matter to your business.</p>
           <div class="contact-note"><span class="note-icon">✳</span><span>No two businesses work the same way.<br>Let’s find a solution that fits yours.</span></div>
         </div>
-        <form class="inquiry-card" id="inquiry-form">
+        <form class="inquiry-card" id="inquiry-form" action="https://formsubmit.co/theidyllicworks@gmail.com" method="POST">   <input type="hidden" name="_subject" value="New inquiry from Idyllic Works website">   <input type="hidden" name="_template" value="table">
           <div class="inquiry-heading"><span class="form-index">A NOTE TO IDYLLIC WORKS</span><h3>Share a little about your project.</h3></div>
           <label>Your name<input name="name" type="text" placeholder="Name" required></label>
           <label>Work email<input name="email" type="email" placeholder="you@company.com" required></label>
           <label>What would you like to improve?<textarea name="message" rows="3" placeholder="A workflow, a system, an idea…" required></textarea></label>
-          <button class="button button-gold form-submit" type="submit">Prepare inquiry <span aria-hidden="true">↗</span></button>
-          <p class="form-note" id="form-note">This inquiry form is a preview and is not connected to an inbox yet.</p>
+          <button class="button button-gold form-submit" type="submit">Send Inquiry <span aria-hidden="true">↗</span></button>
+          <p class="form-note" id="form-note">Your inquiry will be sent to Idyllic Works through FormSubmit. The first submission may require inbox verification.</p>
         </form>
       </div>
       <div class="contact-decoration" aria-hidden="true">IW</div>
@@ -217,9 +217,9 @@ navigation.querySelectorAll('a').forEach((link) => {
 });
 
 document.querySelector('#inquiry-form').addEventListener('submit', (event) => {
-  event.preventDefault();
+  
   const note = document.querySelector('#form-note');
-  note.textContent = 'Thanks for sharing. Add Idyllic Works’ preferred contact email or form endpoint to enable sending.';
+  note.textContent = 'Sending your inquiry to Idyllic Works...';
   note.classList.add('form-note-success');
 });
 
